@@ -1,0 +1,67 @@
+//Color
+$nBlue: #124191;
+$nWhite: #ffffff;
+$nBlueBlack: #001135;
+
+$nGray1: #EDF2F5;
+$nGray2: #BEC8D2;
+$nGray3: #98A2AE;
+$nGray4: #4D5766;
+$nGray5: #273142;
+$nLightBlue: #00C9FF;
+$nRed : #FF3154;
+$nYellow : #FFFB00;
+$nGreen : #4BDD33;
+$nOrange : #FFBB10;
+$nBlack : #000000;
+$nAwaiting: #CCCC00;
+$nDisableFieldColor: #F1F0F0;
+
+// need clarification on the following 4 colors
+$success: #155724;
+$successBgColor: #d4edda;
+$successBorderColor: #c3e6cb;
+
+$error: #721c24;
+$errorBgColor: #f8d7da;
+$errorBorderColor: #f5c6cb;
+
+$warning: #856404;
+$warningBgColor: #fff3cd;
+$warningBorderColor: #ffeeba;
+
+$info: #818182;
+$infoBgColor: #fefefe;
+$infoBorderColor: #fdfdfe;
+$buttonIconFontSize: 16px;
+$buttonIcon24: 24px;
+$iconSize18: 18px;
+$iconSize15: 15px;
+
+$fontSize12: 12px;
+
+
+// mobile
+$breakPointMobileMin: 320px;
+$breakPointMobileMax: 420px; // smaller Ipad
+$breakPointSmallerIpadMin: 421px;
+$breakPointSmallerIpadMax: 780px; // Ipad
+$breakPointIpadMin: 781px;
+$breakPointIpadMax: 1280px; // desktop view
+$breakPointDesktopMin: 1281px; // large screens
+$breakPointLargeDevicesMin: 1366px;
+
+// Vuetify Break points XS and less
+$breakVuetifyXS: 599px;
+
+// Vuetify ipad sm
+$breakVuetifySM: 600px;
+
+// Vuetify ipad md
+$breakVuetifyMD: 960px;
+
+// Vuetify ipad lg
+$breakVuetifyLG: 1264px;
+
+// Vuetify ipad xl
+$breakVuetifyXL: 1904px;

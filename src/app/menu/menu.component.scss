@@ -1,0 +1,35 @@
+@import "../styles/variables.scss";
+.navbar {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: $nWhite;
+    .nav-item {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 12px;
+        font-weight: bold;
+        .nav-link {
+            color: $nBlue;
+        }
+        .dropdown-menu {
+            padding: 0px;
+            li{
+                .dropdown-item {
+                    color: $nBlue;
+                }
+                .dropdown-item:focus, .dropdown-item:hover, .dropdown-item:active{
+                    background-color: $nBlue;
+                    color: $nWhite;
+                }
+            }
+        }
+    } 
+    .nav-item:hover, .nav-item.active {
+        background-color: $nBlue;
+        border-radius: 5px;
+        .nav-link {
+            color: $nWhite;
+        }
+    } 
+ }

@@ -1,0 +1,124 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$mat-nBlue-theme: (
+  50 : #e3e8f2,
+    100 : #b8c6de,
+    200 : #89a0c8,
+    300 : #597ab2,
+    400 : #365ea2,
+    500 : #124191,
+    600 : #103b89,
+    700 : #0d327e,
+    800 : #0a2a74,
+    900 : #051c62,
+    A100 : #93a7ff,
+    A200 : #607dff,
+    A400 : #2d54ff,
+    A700 : #143fff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$mat-nokia-warn: (
+  50 : #ffe6ea,
+  100 : #ffc1cc,
+  200 : #ff98aa,
+  300 : #ff6f87,
+  400 : #ff506e,
+  500 : #ff3154,
+  600 : #ff2c4d,
+  700 : #ff2543,
+  800 : #ff1f3a,
+  900 : #ff1329,
+  A100 : #ffffff,
+  A200 : #fffafa,
+  A400 : #ffc7cb,
+  A700 : #ffadb3,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+$mat-nokia-accent: (
+  50 : #e0f9ff,
+  100 : #b3efff,
+  200 : #80e4ff,
+  300 : #4dd9ff,
+  400 : #26d1ff,
+  500 : #00c9ff,
+  600 : #00c3ff,
+  700 : #00bcff,
+  800 : #00b5ff,
+  900 : #00a9ff,
+  A100 : #ffffff,
+  A200 : #f2faff,
+  A400 : #bfe7ff,
+  A700 : #a6ddff,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #000000,
+      900 : #000000,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+$candy-app-primary: mat-palette($mat-nBlue-theme);
+$candy-app-accent:  mat-palette($mat-nokia-accent);
+$candy-app-warn:    mat-palette($mat-nokia-warn);
+
+$candy-app-theme: mat-light-theme((
+  color: (
+    primary: $candy-app-primary,
+    accent: $candy-app-accent,
+    warn: $candy-app-warn,
+  )
+));
+
+
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$custom-typography: mat-typography-config(
+  $font-family: 'Segoe ui',
+);
+
+@include mat-core($custom-typography);
+@include angular-material-theme($candy-app-theme);

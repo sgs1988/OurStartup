@@ -1,0 +1,78 @@
+/* Mixins */
+//Font Size
+@mixin font-size($sizeValue) {
+  font-size: ($sizeValue * 10) + px;
+}
+//Sentence Case
+@mixin sentence-case() {
+  text-transform: lowercase;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+//Ellipsis
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+//Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+//Media Query Break Points@mixin bp-large {
+@mixin media-mobile {
+  @media only screen and (max-width: $breakPointMobileMax) {
+    @content;
+  }
+}
+@mixin media-except-mobile {
+  @media only screen and (min-width: $breakPointSmallerIpadMin) and (max-width: $breakPointSmallerIpadMax) {
+    @content;
+  }
+}
+
+@mixin media-ipad-portrait {
+  @media only screen and (min-width: $breakPointIpadMin) and (max-width: $breakPointIpadMin) and (orientation:portrait) {
+    @content;
+  }
+}
+@mixin media-ipad-landscape {
+  @media only screen and (min-width: $breakPointIpadMin) and (max-width: $breakPointIpadMax) and (orientation:landscape) {
+    @content;
+  }
+}
+@mixin media-desktop {
+  @media only screen and (min-width: $breakVuetifyMD) {
+    @content;
+  }
+}
+@mixin media-large-devices {
+  @media only screen and (min-width : $breakPointLargeDevicesMin) {
+    @content;
+  }
+}
+
+/* Media for mobile Device */
+@mixin media-device-mobile {
+  @media only screen and (min-width: $breakPointMobileMin) and (max-width: $breakVuetifyXS) {
+    @content;
+  }
+}
+
+/* IE10 and IE11 specific styles*/
+@mixin media-ie {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   @content;
+  }
+}
+/* Media for mobile Device */
+@mixin media-ipad {
+  @media only screen and (min-width: $breakVuetifyXS) and (max-width: $breakVuetifySM) {
+    @content;
+  }
+}
